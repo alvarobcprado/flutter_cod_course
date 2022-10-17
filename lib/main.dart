@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_cod_course/app/common/assets_utils.dart';
 import 'package:flutter_cod_course/app/common/routes.dart';
-import 'package:flutter_cod_course/app/common/theme/cod_theme.dart';
+import 'package:flutter_cod_course/app/common/theme/cod_colors.dart';
+import 'package:flutter_cod_course/app/common/theme/cod_typography.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,8 +24,9 @@ class CodApp extends StatelessWidget {
     return MaterialApp(
       title: 'Chief of Design Courses',
       theme: ThemeData(
-        extensions: const [
-          CodTheme.light(),
+        extensions: [
+          const CodColors.light(),
+          CodTypography(),
         ],
       ),
       routes: CodRoutes.routes,

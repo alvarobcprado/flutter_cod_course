@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CodTheme extends ThemeExtension<CodTheme> {
-  const CodTheme._({
+class CodColors extends ThemeExtension<CodColors> {
+  const CodColors._({
     required this.purple,
     required this.blue,
     required this.orange,
@@ -15,7 +15,7 @@ class CodTheme extends ThemeExtension<CodTheme> {
   final Color yellow;
   final Color beige;
 
-  const CodTheme.light()
+  const CodColors.light()
       : purple = const Color(0xFF772299),
         blue = const Color(0xFF55B8C9),
         orange = const Color(0xFFE86929),
@@ -23,14 +23,14 @@ class CodTheme extends ThemeExtension<CodTheme> {
         beige = const Color(0xFFF9ECE1);
 
   @override
-  ThemeExtension<CodTheme> copyWith({
+  ThemeExtension<CodColors> copyWith({
     Color? purple,
     Color? blue,
     Color? orange,
     Color? yellow,
     Color? beige,
   }) {
-    return CodTheme._(
+    return CodColors._(
       purple: purple ?? this.purple,
       blue: blue ?? this.blue,
       orange: orange ?? this.orange,
@@ -40,11 +40,11 @@ class CodTheme extends ThemeExtension<CodTheme> {
   }
 
   @override
-  ThemeExtension<CodTheme> lerp(ThemeExtension<CodTheme>? other, double t) {
-    if (other == null || other is! CodTheme) {
+  ThemeExtension<CodColors> lerp(ThemeExtension<CodColors>? other, double t) {
+    if (other == null || other is! CodColors) {
       return this;
     }
-    return CodTheme._(
+    return CodColors._(
       purple: Color.lerp(purple, other.purple, t)!,
       blue: Color.lerp(blue, other.blue, t)!,
       orange: Color.lerp(orange, other.orange, t)!,
