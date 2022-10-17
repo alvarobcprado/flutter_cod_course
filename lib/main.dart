@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cod_course/app/common/assets_utils.dart';
 import 'package:flutter_cod_course/app/common/routes.dart';
 
 void main() {
+  AssetsUtils.precacheImages();
   runApp(const CodApp());
 }
 
