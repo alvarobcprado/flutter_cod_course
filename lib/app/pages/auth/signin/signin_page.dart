@@ -3,6 +3,8 @@ import 'package:flutter_cod_course/app/common/assets_utils.dart';
 import 'package:flutter_cod_course/app/common/routes.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_colors.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_typography.dart';
+import 'package:flutter_cod_course/app/common/validators/email_validator.dart';
+import 'package:flutter_cod_course/app/common/validators/password_validator.dart';
 import 'package:flutter_cod_course/app/common/view_utils.dart';
 import 'package:flutter_cod_course/app/common/widgets/cod_text_divider.dart';
 import 'package:flutter_cod_course/app/common/widgets/cod_text_field.dart';
@@ -10,7 +12,8 @@ import 'package:flutter_cod_course/app/common/widgets/colored_box_column.dart';
 import 'package:flutter_cod_course/app/common/widgets/colored_button.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SigninPage extends StatelessWidget {
+class SigninPage extends StatelessWidget
+    with EmailValidator, PasswordValidator {
   SigninPage({super.key});
 
   final _obscurePasswordNotifier = ValueNotifier<bool>(true);
@@ -59,6 +62,7 @@ class SigninPage extends StatelessWidget {
                       controller: _emailController,
                       color: colors.purple,
                       hintStyle: typo.body,
+                      validator: validateEmail,
                       prefixIcon: Icon(
                         Icons.email_outlined,
                         color: colors.purple,
@@ -74,6 +78,7 @@ class SigninPage extends StatelessWidget {
                           controller: _passwordController,
                           color: colors.purple,
                           hintStyle: typo.body,
+                          validator: validatePassword,
                           prefixIcon: Icon(
                             Icons.lock_outline,
                             color: colors.purple,

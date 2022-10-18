@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cod_course/app/common/view_utils.dart';
 
+typedef CodFieldValidator = String? Function(String? value);
+
 class CodTextField extends StatelessWidget {
   const CodTextField({
     super.key,
@@ -13,6 +15,7 @@ class CodTextField extends StatelessWidget {
     this.suffixIcon,
     this.textInputAction = TextInputAction.done,
     this.onChanged,
+    this.validator,
   });
 
   final Color color;
@@ -24,15 +27,18 @@ class CodTextField extends StatelessWidget {
   final bool obscureText;
   final TextInputAction textInputAction;
   final ValueChanged<String>? onChanged;
+  final CodFieldValidator? validator;
 
   @override
   Widget build(BuildContext context) {
     final borderWidth = 2.0.fromHeight(context);
-    return TextField(
+    return TextFormField(
       controller: controller,
       obscureText: obscureText,
       textInputAction: textInputAction,
       onChanged: onChanged,
+      validator: validator,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: hintStyle?.copyWith(color: color),
