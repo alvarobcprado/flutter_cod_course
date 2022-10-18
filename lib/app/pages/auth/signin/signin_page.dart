@@ -11,7 +11,11 @@ import 'package:flutter_cod_course/app/common/widgets/colored_button.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SigninPage extends StatelessWidget {
-  const SigninPage({super.key});
+  SigninPage({super.key});
+
+  final _obscurePasswordNotifier = ValueNotifier<bool>(true);
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -52,29 +56,43 @@ class SigninPage extends StatelessWidget {
                     SizedBox(height: 8.fromHeight(context)),
                     CodTextField(
                       hintText: 'email@email.com',
-                      controller: TextEditingController(),
+                      controller: _emailController,
                       color: colors.purple,
                       hintStyle: typo.body,
                       prefixIcon: Icon(
                         Icons.email_outlined,
                         color: colors.purple,
                       ),
+                      textInputAction: TextInputAction.next,
                     ),
                     SizedBox(height: 8.fromHeight(context)),
-                    CodTextField(
-                      hintText: 'password',
-                      controller: TextEditingController(),
-                      color: colors.purple,
-                      hintStyle: typo.body,
-                      prefixIcon: Icon(
-                        Icons.lock_outline,
-                        color: colors.purple,
-                      ),
-                      suffixIcon: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.visibility_outlined),
-                        color: colors.purple,
-                      ),
+                    ValueListenableBuilder(
+                      valueListenable: _obscurePasswordNotifier,
+                      builder: (context, obscurePassword, child) {
+                        return CodTextField(
+                          hintText: 'password',
+                          controller: _passwordController,
+                          color: colors.purple,
+                          hintStyle: typo.body,
+                          prefixIcon: Icon(
+                            Icons.lock_outline,
+                            color: colors.purple,
+                          ),
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              _obscurePasswordNotifier.value =
+                                  !_obscurePasswordNotifier.value;
+                            },
+                            icon: Icon(
+                              obscurePassword
+                                  ? Icons.visibility_outlined
+                                  : Icons.visibility_off_outlined,
+                            ),
+                            color: colors.purple,
+                          ),
+                          obscureText: obscurePassword,
+                        );
+                      },
                     ),
                     Align(
                       alignment: Alignment.centerRight,

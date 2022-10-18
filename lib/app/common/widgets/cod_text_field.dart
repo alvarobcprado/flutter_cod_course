@@ -7,9 +7,12 @@ class CodTextField extends StatelessWidget {
     required this.hintText,
     required this.controller,
     required this.color,
+    this.obscureText = false,
     this.hintStyle,
     this.prefixIcon,
     this.suffixIcon,
+    this.textInputAction = TextInputAction.done,
+    this.onChanged,
   });
 
   final Color color;
@@ -18,12 +21,18 @@ class CodTextField extends StatelessWidget {
   final Widget? suffixIcon;
   final TextStyle? hintStyle;
   final TextEditingController controller;
+  final bool obscureText;
+  final TextInputAction textInputAction;
+  final ValueChanged<String>? onChanged;
 
   @override
   Widget build(BuildContext context) {
     final borderWidth = 2.0.fromHeight(context);
     return TextField(
       controller: controller,
+      obscureText: obscureText,
+      textInputAction: textInputAction,
+      onChanged: onChanged,
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: hintStyle?.copyWith(color: color),

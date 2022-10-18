@@ -10,7 +10,7 @@ abstract class CodRoutes {
 
   static final Map<String, WidgetBuilder> routes = {
     landing: (context) => const LandingAuthPage(),
-    signin: (context) => const SigninPage(),
+    signin: (context) => SigninPage(),
     signup: (context) => const SizedBox(),
     home: (context) => const SizedBox(),
   };
