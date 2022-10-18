@@ -12,12 +12,13 @@ import 'package:flutter_cod_course/app/common/widgets/colored_box_column.dart';
 import 'package:flutter_cod_course/app/common/widgets/colored_button.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SigninPage extends StatelessWidget
+class SignupPage extends StatelessWidget
     with EmailValidator, RequiredValidator {
-  SigninPage({super.key});
+  SignupPage({super.key});
 
   final _obscurePasswordNotifier = ValueNotifier<bool>(true);
   final _emailController = TextEditingController();
+  final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
 
   @override
@@ -51,10 +52,23 @@ class SigninPage extends StatelessWidget
                   boxSize: Size.fromHeight(376.fromHeight(context)),
                   children: [
                     Text(
-                      'Logar no Chief',
+                      'Cadastrar no Chief',
                       style: typo.titleH1.copyWith(
                         color: colors.purple,
                       ),
+                    ),
+                    SizedBox(height: 8.fromHeight(context)),
+                    CodTextField(
+                      hintText: 'name',
+                      controller: _usernameController,
+                      color: colors.purple,
+                      hintStyle: typo.body,
+                      validator: validateText,
+                      prefixIcon: Icon(
+                        Icons.person_outline,
+                        color: colors.purple,
+                      ),
+                      textInputAction: TextInputAction.next,
                     ),
                     SizedBox(height: 8.fromHeight(context)),
                     CodTextField(
@@ -99,31 +113,13 @@ class SigninPage extends StatelessWidget
                         );
                       },
                     ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: TextButton(
-                        style: TextButton.styleFrom(
-                          padding: EdgeInsets.zero,
-                        ),
-                        onPressed: () {},
-                        child: Text(
-                          'Esqueceu a senha?',
-                          style: typo.body.copyWith(
-                            color: colors.orange,
-                            fontWeight: FontWeight.w600,
-                            decoration: TextDecoration.underline,
-                            decorationThickness: 2.fromHeight(context),
-                          ),
-                        ),
-                      ),
-                    ),
                     SizedBox(height: 16.fromHeight(context)),
                     ColoredButton(
                       backgroundColor: colors.orange,
                       textColor: colors.beige,
-                      text: 'Login',
+                      text: 'Cadastrar',
                       onPressed: () {
-                        Navigator.of(context).pushNamed(CodRoutes.signin);
+                        Navigator.of(context).pushNamed(CodRoutes.signup);
                       },
                     ),
                     CodTextDivider(
@@ -134,10 +130,10 @@ class SigninPage extends StatelessWidget
                     ColoredButton(
                       backgroundColor: colors.purple,
                       textColor: colors.beige,
-                      text: 'Cadastrar',
+                      text: 'Login',
                       onPressed: () {
                         Navigator.of(context).pushNamedAndRemoveUntil(
-                          CodRoutes.signup,
+                          CodRoutes.signin,
                           (route) => route.isFirst,
                         );
                       },

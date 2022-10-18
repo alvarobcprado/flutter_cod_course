@@ -1,5 +1,5 @@
-mixin PasswordValidator {
-  String? validatePassword(String? value) {
+mixin RequiredValidator {
+  String? validateText(String? value) {
     if (value == null || value.isEmpty) {
       return 'Campo obrigatório';
     }

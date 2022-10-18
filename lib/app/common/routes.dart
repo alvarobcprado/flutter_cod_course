@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cod_course/app/pages/auth/landing/landing_auth_page.dart';
 import 'package:flutter_cod_course/app/pages/auth/signin/signin_page.dart';
+import 'package:flutter_cod_course/app/pages/auth/signup/signup_page.dart';
 
 abstract class CodRoutes {
   static const String landing = '/';
@@ -11,7 +12,7 @@ abstract class CodRoutes {
   static final Map<String, WidgetBuilder> routes = {
     landing: (context) => const LandingAuthPage(),
     signin: (context) => SigninPage(),
-    signup: (context) => const SizedBox(),
+    signup: (context) => SignupPage(),
     home: (context) => const SizedBox(),
   };
 }
