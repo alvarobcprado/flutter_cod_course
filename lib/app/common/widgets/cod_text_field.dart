@@ -3,8 +3,8 @@ import 'package:flutter_cod_course/app/common/view_utils.dart';
 
 typedef CodFieldValidator = String? Function(String? value);
 
-class CodTextField extends StatelessWidget {
-  const CodTextField({
+class CodFormTextField extends StatelessWidget {
+  const CodFormTextField({
     super.key,
     required this.hintText,
     required this.controller,
@@ -33,6 +33,7 @@ class CodTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     final borderWidth = 2.0.fromHeight(context);
     return TextFormField(
+      key: key,
       controller: controller,
       obscureText: obscureText,
       textInputAction: textInputAction,
