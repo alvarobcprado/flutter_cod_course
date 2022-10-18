@@ -40,43 +40,45 @@ class LandingAuthPage extends StatelessWidget {
               ),
               height: 376.fromHeight(context),
               width: double.infinity,
-              padding: EdgeInsets.all(24.fromHeight(context)),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Bem vindo(a) ao Chief',
-                    style: typo.titleH1.copyWith(
-                      color: colors.beige,
+              child: SingleChildScrollView(
+                padding: EdgeInsets.all(24.fromHeight(context)),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Bem vindo(a) ao Chief',
+                      style: typo.titleH1.copyWith(
+                        color: colors.beige,
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 16.fromHeight(context)),
-                  Text(
-                    'Essa é a área de membros do Chief. Caso já tenha uma conta, clique em logar, senão, clique em criar conta.',
-                    style: typo.body.copyWith(
-                      color: colors.beige,
+                    SizedBox(height: 16.fromHeight(context)),
+                    Text(
+                      'Essa é a área de membros do Chief. Caso já tenha uma conta, clique em logar, senão, clique em criar conta.',
+                      style: typo.body.copyWith(
+                        color: colors.beige,
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 32.fromHeight(context)),
-                  ColoredButton(
-                    backgroundColor: colors.orange,
-                    textColor: colors.beige,
-                    text: 'Login',
-                    onPressed: () {
-                      Navigator.of(context).pushNamed(CodRoutes.signin);
-                    },
-                  ),
-                  SizedBox(height: 24.fromHeight(context)),
-                  ColoredButton(
-                    backgroundColor: colors.beige,
-                    textColor: colors.purple,
-                    text: 'Criar conta',
-                    onPressed: () {
-                      Navigator.of(context).pushNamed(CodRoutes.signup);
-                    },
-                  ),
-                ],
+                    SizedBox(height: 32.fromHeight(context)),
+                    ColoredButton(
+                      backgroundColor: colors.orange,
+                      textColor: colors.beige,
+                      text: 'Login',
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(CodRoutes.signin);
+                      },
+                    ),
+                    SizedBox(height: 24.fromHeight(context)),
+                    ColoredButton(
+                      backgroundColor: colors.beige,
+                      textColor: colors.purple,
+                      text: 'Criar conta',
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(CodRoutes.signup);
+                      },
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

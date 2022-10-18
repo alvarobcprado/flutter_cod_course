@@ -24,6 +24,7 @@ class CodApp extends StatelessWidget {
     return MaterialApp(
       title: 'Chief of Design Courses',
       theme: ThemeData(
+        useMaterial3: true,
         extensions: [
           const CodColors.light(),
           CodTypography(),
