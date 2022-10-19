@@ -5,9 +5,9 @@ import 'package:flutter_cod_course/app/common/routes.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_colors.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_typography.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  AssetsUtils.precacheImages();
+  await AssetsUtils.precacheImages();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
