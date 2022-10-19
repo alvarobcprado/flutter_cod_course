@@ -9,6 +9,8 @@ extension SizesExtension on num {
     WidgetsBinding.instance.window,
   );
 
+  double get pixelToInches => this * 0.010417;
+
   double _getScreenWidth() {
     final viewPadding = _mediaQuery.padding.horizontal;
     final screenWidth = _mediaQuery.size.width;
@@ -24,6 +26,11 @@ extension SizesExtension on num {
   double toSize() {
     final size = max(_getScreenHeight(), _getScreenWidth());
     return size * (this / _baseSize);
+  }
+
+  double toSP() {
+    final density = _getScreenHeight() / _getScreenWidth().pixelToInches;
+    return ((this * 160) / density) * _mediaQuery.textScaleFactor;
   }
 }
 
