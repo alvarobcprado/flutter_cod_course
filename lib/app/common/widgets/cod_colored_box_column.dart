@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
-class ColoredBoxColumn extends StatelessWidget {
-  const ColoredBoxColumn({
+class CodColoredBoxColumn extends StatelessWidget {
+  const CodColoredBoxColumn({
     super.key,
     required this.boxColor,
     required this.boxSize,

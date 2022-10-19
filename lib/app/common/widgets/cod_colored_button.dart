@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_typography.dart';
 import 'package:flutter_cod_course/app/common/view_utils.dart';
 
-class ColoredButton extends StatelessWidget {
-  const ColoredButton({
+class CodColoredButton extends StatelessWidget {
+  const CodColoredButton({
     super.key,
     required this.backgroundColor,
     required this.textColor,

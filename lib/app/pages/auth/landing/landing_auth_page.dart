@@ -4,8 +4,8 @@ import 'package:flutter_cod_course/app/common/routes.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_colors.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_typography.dart';
 import 'package:flutter_cod_course/app/common/view_utils.dart';
-import 'package:flutter_cod_course/app/common/widgets/colored_box_column.dart';
-import 'package:flutter_cod_course/app/common/widgets/colored_button.dart';
+import 'package:flutter_cod_course/app/common/widgets/cod_colored_box_column.dart';
+import 'package:flutter_cod_course/app/common/widgets/cod_colored_button.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class LandingAuthPage extends StatelessWidget {
@@ -32,7 +32,7 @@ class LandingAuthPage extends StatelessWidget {
                 height: 200.fromHeight(context),
               ),
             ),
-            ColoredBoxColumn(
+            CodColoredBoxColumn(
               boxColor: colors.purple,
               boxPadding: EdgeInsets.all(24.fromHeight(context)),
               boxSize: Size.fromHeight(376.fromHeight(context)),
@@ -51,7 +51,7 @@ class LandingAuthPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 32.fromHeight(context)),
-                ColoredButton(
+                CodColoredButton(
                   backgroundColor: colors.orange,
                   textColor: colors.beige,
                   text: 'Login',
@@ -60,7 +60,7 @@ class LandingAuthPage extends StatelessWidget {
                   },
                 ),
                 SizedBox(height: 24.fromHeight(context)),
-                ColoredButton(
+                CodColoredButton(
                   backgroundColor: colors.beige,
                   textColor: colors.purple,
                   text: 'Criar conta',

@@ -6,10 +6,10 @@ import 'package:flutter_cod_course/app/common/theme/cod_typography.dart';
 import 'package:flutter_cod_course/app/common/validators/email_validator.dart';
 import 'package:flutter_cod_course/app/common/validators/required_validator.dart';
 import 'package:flutter_cod_course/app/common/view_utils.dart';
+import 'package:flutter_cod_course/app/common/widgets/cod_colored_box_column.dart';
+import 'package:flutter_cod_course/app/common/widgets/cod_colored_button.dart';
 import 'package:flutter_cod_course/app/common/widgets/cod_text_divider.dart';
 import 'package:flutter_cod_course/app/common/widgets/cod_text_field.dart';
-import 'package:flutter_cod_course/app/common/widgets/colored_box_column.dart';
-import 'package:flutter_cod_course/app/common/widgets/colored_button.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SigninPage extends StatelessWidget
@@ -48,7 +48,7 @@ class SigninPage extends StatelessWidget
                 ),
                 Form(
                   key: _formKey,
-                  child: ColoredBoxColumn(
+                  child: CodColoredBoxColumn(
                     boxPadding: EdgeInsets.all(24.fromHeight(context)),
                     boxColor: colors.beige,
                     boxSize: Size.fromHeight(376.fromHeight(context)),
@@ -121,7 +121,7 @@ class SigninPage extends StatelessWidget
                         ),
                       ),
                       SizedBox(height: 16.fromHeight(context)),
-                      ColoredButton(
+                      CodColoredButton(
                         backgroundColor: colors.orange,
                         textColor: colors.beige,
                         text: 'Login',
@@ -136,7 +136,7 @@ class SigninPage extends StatelessWidget
                         text: 'ou',
                         textStyle: typo.body,
                       ),
-                      ColoredButton(
+                      CodColoredButton(
                         backgroundColor: colors.purple,
                         textColor: colors.beige,
                         text: 'Cadastrar',
