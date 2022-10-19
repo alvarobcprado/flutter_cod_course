@@ -33,6 +33,7 @@ class HomeHeader extends StatelessWidget {
             child: Material(
               color: Colors.transparent,
               borderRadius: BorderRadius.circular(8),
+              clipBehavior: Clip.hardEdge,
               child: InkWell(
                 onTap: onTapExit,
                 child: Row(
