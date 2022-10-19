@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cod_course/app/common/assets_utils.dart';
-import 'package:flutter_cod_course/app/common/routes.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_colors.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_typography.dart';
-import 'package:flutter_cod_course/app/common/validators/email_validator.dart';
-import 'package:flutter_cod_course/app/common/validators/required_validator.dart';
 import 'package:flutter_cod_course/app/common/view_utils.dart';
 import 'package:flutter_cod_course/app/common/widgets/cod_colored_box_column.dart';
-import 'package:flutter_cod_course/app/common/widgets/cod_colored_button.dart';
-import 'package:flutter_cod_course/app/common/widgets/cod_text_divider.dart';
-import 'package:flutter_cod_course/app/common/widgets/cod_text_field.dart';
+import 'package:flutter_cod_course/app/pages/auth/signin/widgets/signin_buttons.dart';
+import 'package:flutter_cod_course/app/pages/auth/signin/widgets/signin_form_fields.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SigninPage extends StatelessWidget
-    with EmailValidator, RequiredValidator {
+class SigninPage extends StatelessWidget {
   SigninPage({super.key});
 
   final _obscurePasswordNotifier = ValueNotifier<bool>(true);
@@ -60,93 +55,12 @@ class SigninPage extends StatelessWidget
                         ),
                       ),
                       SizedBox(height: 8.fromHeight(context)),
-                      CodFormTextField(
-                        hintText: 'email@email.com',
-                        controller: _emailController,
-                        color: colors.purple,
-                        hintStyle: typo.body,
-                        validator: validateEmail,
-                        prefixIcon: Icon(
-                          Icons.email_outlined,
-                          color: colors.purple,
-                        ),
-                        textInputAction: TextInputAction.next,
+                      SigninFormFields(
+                        emailController: _emailController,
+                        passwordController: _passwordController,
+                        obscurePasswordNotifier: _obscurePasswordNotifier,
                       ),
-                      SizedBox(height: 8.fromHeight(context)),
-                      ValueListenableBuilder(
-                        valueListenable: _obscurePasswordNotifier,
-                        builder: (context, obscurePassword, child) {
-                          return CodFormTextField(
-                            hintText: 'password',
-                            controller: _passwordController,
-                            color: colors.purple,
-                            hintStyle: typo.body,
-                            validator: validateText,
-                            prefixIcon: Icon(
-                              Icons.lock_outline,
-                              color: colors.purple,
-                            ),
-                            suffixIcon: IconButton(
-                              onPressed: () {
-                                _obscurePasswordNotifier.value =
-                                    !_obscurePasswordNotifier.value;
-                              },
-                              icon: Icon(
-                                obscurePassword
-                                    ? Icons.visibility_outlined
-                                    : Icons.visibility_off_outlined,
-                              ),
-                              color: colors.purple,
-                            ),
-                            obscureText: obscurePassword,
-                          );
-                        },
-                      ),
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: TextButton(
-                          style: TextButton.styleFrom(
-                            padding: EdgeInsets.zero,
-                          ),
-                          onPressed: () {},
-                          child: Text(
-                            'Esqueceu a senha?',
-                            style: typo.body.copyWith(
-                              color: colors.orange,
-                              fontWeight: FontWeight.w600,
-                              decoration: TextDecoration.underline,
-                              decorationThickness: 2.fromHeight(context),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 16.fromHeight(context)),
-                      CodColoredButton(
-                        backgroundColor: colors.orange,
-                        textColor: colors.beige,
-                        text: 'Login',
-                        onPressed: () {
-                          if (_formKey.currentState!.validate()) {
-                            Navigator.of(context).pushNamed(CodRoutes.home);
-                          }
-                        },
-                      ),
-                      CodTextDivider(
-                        color: colors.purple,
-                        text: 'ou',
-                        textStyle: typo.body,
-                      ),
-                      CodColoredButton(
-                        backgroundColor: colors.purple,
-                        textColor: colors.beige,
-                        text: 'Cadastrar',
-                        onPressed: () {
-                          Navigator.of(context).pushNamedAndRemoveUntil(
-                            CodRoutes.signup,
-                            (route) => route.isFirst,
-                          );
-                        },
-                      ),
+                      SigninButtons(formKey: _formKey),
                     ],
                   ),
                 ),
