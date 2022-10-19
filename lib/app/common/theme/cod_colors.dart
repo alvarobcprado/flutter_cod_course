@@ -7,6 +7,8 @@ class CodColors extends ThemeExtension<CodColors> {
     required this.orange,
     required this.yellow,
     required this.beige,
+    required this.grey,
+    required this.red,
   });
 
   final Color purple;
@@ -14,13 +16,17 @@ class CodColors extends ThemeExtension<CodColors> {
   final Color orange;
   final Color yellow;
   final Color beige;
+  final Color grey;
+  final Color red;
 
   const CodColors.light()
       : purple = const Color(0xFF772299),
         blue = const Color(0xFF55B8C9),
         orange = const Color(0xFFE86929),
         yellow = const Color(0xFFFFAE00),
-        beige = const Color(0xFFF9ECE1);
+        beige = const Color(0xFFF9ECE1),
+        grey = const Color(0xFF736956),
+        red = const Color(0xFFFF0000);
 
   @override
   ThemeExtension<CodColors> copyWith({
@@ -29,6 +35,8 @@ class CodColors extends ThemeExtension<CodColors> {
     Color? orange,
     Color? yellow,
     Color? beige,
+    Color? grey,
+    Color? red,
   }) {
     return CodColors._(
       purple: purple ?? this.purple,
@@ -36,6 +44,8 @@ class CodColors extends ThemeExtension<CodColors> {
       orange: orange ?? this.orange,
       yellow: yellow ?? this.yellow,
       beige: beige ?? this.beige,
+      grey: grey ?? this.grey,
+      red: red ?? this.red,
     );
   }
 
@@ -50,6 +60,8 @@ class CodColors extends ThemeExtension<CodColors> {
       orange: Color.lerp(orange, other.orange, t)!,
       yellow: Color.lerp(yellow, other.yellow, t)!,
       beige: Color.lerp(beige, other.beige, t)!,
+      grey: Color.lerp(grey, other.grey, t)!,
+      red: Color.lerp(red, other.red, t)!,
     );
   }
 }
