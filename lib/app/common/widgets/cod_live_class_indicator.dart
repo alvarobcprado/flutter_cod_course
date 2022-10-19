@@ -15,8 +15,6 @@ class CodLiveClassIndicator extends StatelessWidget {
     final colors = theme.extension<CodColors>()!;
     final typos = theme.extension<CodTypography>()!;
     return Container(
-      height: 10.toSize(),
-      width: 34.toSize(),
       decoration: BoxDecoration(
         color: colors.yellow,
         borderRadius: BorderRadius.circular(8),
@@ -26,6 +24,7 @@ class CodLiveClassIndicator extends StatelessWidget {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
         children: [
           CircleAvatar(
             radius: 2.toSize(),
@@ -35,7 +34,7 @@ class CodLiveClassIndicator extends StatelessWidget {
           Text(
             isLive ? 'AO VIVO' : 'GRAVADO',
             style: typos.titleH3.copyWith(
-              fontSize: 6,
+              fontSize: 6.toSP(),
               color: colors.purple,
             ),
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_colors.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_typography.dart';
+import 'package:flutter_cod_course/app/common/view_utils.dart';
 
 class HomeSectionHeader extends StatelessWidget {
   const HomeSectionHeader({
@@ -51,7 +52,7 @@ class HomeSectionHeader extends StatelessWidget {
                     text: showMoreTitle,
                     style: typos.body.copyWith(
                       color: colors.purple,
-                      fontSize: 12,
+                      fontSize: 12.toSP(),
                     ),
                     children: [
                       WidgetSpan(
@@ -77,7 +78,7 @@ class HomeSectionHeader extends StatelessWidget {
             style: typos.titleH3.copyWith(
               color: colors.grey,
               fontWeight: FontWeight.w400,
-              fontSize: 12,
+              fontSize: 12.toSP(),
             ),
           ),
       ],

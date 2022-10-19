@@ -60,14 +60,14 @@ class CodClassProgressCard extends StatelessWidget {
                   classTitle,
                   style: typos.titleH2.copyWith(
                     color: colors.beige,
-                    fontSize: 16,
+                    fontSize: 16.toSP(),
                   ),
                 ),
                 Text(
                   classSubtitle,
                   style: typos.body.copyWith(
                     color: colors.beige,
-                    fontSize: 12,
+                    fontSize: 12.toSP(),
                   ),
                 ),
               ],
@@ -88,7 +88,7 @@ class CodClassProgressCard extends StatelessWidget {
                   isCompleted ? 'Assista novamente' : 'Continue assistindo',
                   style: typos.titleH3.copyWith(
                     color: colors.beige,
-                    fontSize: 12,
+                    fontSize: 12.toSP(),
                   ),
                 ),
                 const Spacer(),
@@ -98,7 +98,7 @@ class CodClassProgressCard extends StatelessWidget {
                       : '${remainingTime.inMinutes} min restantes',
                   style: typos.titleH3.copyWith(
                     color: colors.beige,
-                    fontSize: 12,
+                    fontSize: 12.toSP(),
                   ),
                 ),
               ],

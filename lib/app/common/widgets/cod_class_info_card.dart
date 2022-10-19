@@ -55,14 +55,14 @@ class CodClassInfoCard extends StatelessWidget {
                             classTitle,
                             style: typos.titleH3.copyWith(
                               color: colors.beige,
-                              fontSize: 14,
+                              fontSize: 14.toSP(),
                             ),
                           ),
                           Text.rich(
                             TextSpan(
                               style: typos.body.copyWith(
                                 color: colors.beige,
-                                fontSize: 10,
+                                fontSize: 10.toSP(),
                                 fontWeight: FontWeight.w400,
                               ),
                               children: [
@@ -99,7 +99,7 @@ class CodClassInfoCard extends StatelessWidget {
                     child: Text(
                       classDescription,
                       style: typos.body.copyWith(
-                        fontSize: 8,
+                        fontSize: 8.toSP(),
                         color: colors.beige,
                       ),
                     ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cod_course/app/common/view_utils.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CodTypography extends ThemeExtension<CodTypography> {
@@ -11,22 +12,22 @@ class CodTypography extends ThemeExtension<CodTypography> {
 
   CodTypography()
       : titleH1 = GoogleFonts.oswald(
-          fontSize: 32,
+          fontSize: 32.toSP(),
           height: 1.5,
           fontWeight: FontWeight.w500,
         ),
         titleH2 = GoogleFonts.oswald(
-          fontSize: 24,
+          fontSize: 24.toSP(),
           height: 1.5,
           fontWeight: FontWeight.w500,
         ),
         titleH3 = GoogleFonts.oswald(
-          fontSize: 16,
+          fontSize: 16.toSP(),
           height: 1.5,
           fontWeight: FontWeight.w500,
         ),
         body = GoogleFonts.montserrat(
-          fontSize: 16,
+          fontSize: 16.toSP(),
           height: 1.5,
           fontWeight: FontWeight.w500,
         );

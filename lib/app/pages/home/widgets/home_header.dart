@@ -44,7 +44,7 @@ class HomeHeader extends StatelessWidget {
                       'Sair ',
                       style: typos.body.copyWith(
                         color: colors.beige,
-                        fontSize: 12,
+                        fontSize: 12.toSP(),
                       ),
                     ),
                     Icon(

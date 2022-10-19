@@ -52,14 +52,14 @@ class CodTeacherPreviewCard extends StatelessWidget {
                   teacherName,
                   style: typos.titleH3.copyWith(
                     color: colors.purple,
-                    fontSize: 14,
+                    fontSize: 14.toSP(),
                   ),
                 ),
                 Text(
                   teacherSpecialty,
                   style: typos.titleH3.copyWith(
                     color: colors.blue,
-                    fontSize: 8,
+                    fontSize: 8.toSP(),
                   ),
                 ),
               ],

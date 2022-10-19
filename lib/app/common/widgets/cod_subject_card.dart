@@ -47,7 +47,7 @@ class CodSubjectCard extends StatelessWidget {
                 '$subjectClasses aulas',
                 style: typos.titleH3.copyWith(
                   color: colors.beige,
-                  fontSize: 10,
+                  fontSize: 10.toSP(),
                 ),
               ),
             ],

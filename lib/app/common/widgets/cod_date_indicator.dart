@@ -33,7 +33,7 @@ class CodDateIndicator extends StatelessWidget {
             date,
             style: typos.titleH3.copyWith(
               color: colors.purple,
-              fontSize: 17,
+              fontSize: 16.toSP(),
               height: 1,
             ),
           ),
@@ -41,7 +41,7 @@ class CodDateIndicator extends StatelessWidget {
             month,
             style: typos.titleH3.copyWith(
               color: colors.purple,
-              fontSize: 10,
+              fontSize: 10.toSP(),
               height: 1,
             ),
           ),
