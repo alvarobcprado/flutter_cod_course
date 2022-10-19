@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_colors.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_typography.dart';
 import 'package:flutter_cod_course/app/common/view_utils.dart';
+import 'package:flutter_cod_course/app/common/widgets/cod_network_image.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
@@ -68,6 +69,7 @@ class HomeHeader extends StatelessWidget {
                   border: Border.all(
                     color: colors.orange,
                     width: 2.fromHeight(context),
+                    strokeAlign: StrokeAlign.outside,
                   ),
                   image: DecorationImage(
                     fit: BoxFit.cover,
@@ -75,6 +77,10 @@ class HomeHeader extends StatelessWidget {
                       urlImage,
                     ),
                   ),
+                ),
+                clipBehavior: Clip.antiAlias,
+                child: CodNetworkImage(
+                  urlImage: urlImage,
                 ),
               ),
               SizedBox(

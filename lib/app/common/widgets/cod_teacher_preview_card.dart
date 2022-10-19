@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_colors.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_typography.dart';
 import 'package:flutter_cod_course/app/common/view_utils.dart';
+import 'package:flutter_cod_course/app/common/widgets/cod_network_image.dart';
 
 class CodTeacherPreviewCard extends StatelessWidget {
   const CodTeacherPreviewCard({
@@ -30,10 +31,18 @@ class CodTeacherPreviewCard extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            CircleAvatar(
-              radius: 24.fromHeight(context),
-              backgroundColor: colors.purple,
-              backgroundImage: NetworkImage(urlImage),
+            Container(
+              width: 48.fromWidth(context),
+              height: 48.fromWidth(context),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: colors.purple,
+              ),
+              clipBehavior: Clip.hardEdge,
+              child: CodNetworkImage(
+                urlImage: urlImage,
+                loadingColor: colors.orange,
+              ),
             ),
             SizedBox(width: 8.fromHeight(context)),
             Column(
