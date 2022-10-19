@@ -22,8 +22,8 @@ class CodSubjectCard extends StatelessWidget {
     final typos = Theme.of(context).extension<CodTypography>()!;
     final colors = Theme.of(context).extension<CodColors>()!;
     return Container(
-      width: 96.fromHeight(context),
-      height: 72.fromHeight(context),
+      width: 96.toSize(),
+      height: 72.toSize(),
       decoration: BoxDecoration(
         color: colors.purple,
         borderRadius: BorderRadius.circular(16),

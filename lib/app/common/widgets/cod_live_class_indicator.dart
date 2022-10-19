@@ -15,23 +15,23 @@ class CodLiveClassIndicator extends StatelessWidget {
     final colors = theme.extension<CodColors>()!;
     final typos = theme.extension<CodTypography>()!;
     return Container(
-      height: 10.fromHeight(context),
-      width: 32.fromHeight(context),
+      height: 10.toSize(),
+      width: 34.toSize(),
       decoration: BoxDecoration(
         color: colors.yellow,
         borderRadius: BorderRadius.circular(8),
       ),
       padding: EdgeInsets.symmetric(
-        horizontal: 2.fromHeight(context),
+        horizontal: 2.toSize(),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CircleAvatar(
-            radius: 2.fromHeight(context),
+            radius: 2.toSize(),
             backgroundColor: isLive ? colors.red : colors.grey,
           ),
-          SizedBox(width: 2.fromHeight(context)),
+          SizedBox(width: 2.toSize()),
           Text(
             isLive ? 'AO VIVO' : 'GRAVADO',
             style: typos.titleH3.copyWith(

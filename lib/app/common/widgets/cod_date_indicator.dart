@@ -19,13 +19,13 @@ class CodDateIndicator extends StatelessWidget {
     final colors = theme.extension<CodColors>()!;
     final typos = theme.extension<CodTypography>()!;
     return Container(
-      width: 40.fromHeight(context),
-      height: 32.fromHeight(context),
+      width: 40.toSize(),
+      height: 32.toSize(),
       decoration: BoxDecoration(
         color: colors.yellow,
         borderRadius: BorderRadius.circular(8),
       ),
-      padding: EdgeInsets.all(4.fromHeight(context)),
+      padding: EdgeInsets.all(2.toSize()),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

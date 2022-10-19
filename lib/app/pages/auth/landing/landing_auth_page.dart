@@ -15,32 +15,34 @@ class LandingAuthPage extends StatelessWidget {
     final colors = Theme.of(context).extension<CodColors>()!;
     return Scaffold(
       backgroundColor: colors.beige,
-      body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(
-                vertical: 32.fromHeight(context),
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 32.toSize(),
+                ),
+                child: SvgPicture.asset(
+                  AssetsUtils.logo,
+                  height: 200.toSize(),
+                ),
               ),
-              child: SvgPicture.asset(
-                AssetsUtils.logo,
-                height: 200.fromHeight(context),
+              CodColoredBoxColumn(
+                boxColor: colors.purple,
+                boxPadding: EdgeInsets.all(24.toSize()),
+                boxSize: Size.fromHeight(376.toSize()),
+                children: [
+                  const LandingHeader(),
+                  SizedBox(height: 32.toSize()),
+                  const LandingRedirectButtons(),
+                ],
               ),
-            ),
-            CodColoredBoxColumn(
-              boxColor: colors.purple,
-              boxPadding: EdgeInsets.all(24.fromHeight(context)),
-              boxSize: Size.fromHeight(376.fromHeight(context)),
-              children: [
-                const LandingHeader(),
-                SizedBox(height: 32.fromHeight(context)),
-                const LandingRedirectButtons(),
-              ],
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

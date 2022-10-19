@@ -20,7 +20,7 @@ class LandingHeader extends StatelessWidget {
             color: colors.beige,
           ),
         ),
-        SizedBox(height: 16.fromHeight(context)),
+        SizedBox(height: 16.toSize()),
         Text(
           'Essa é a área de membros do Chief. Caso já tenha uma conta, clique em logar, senão, clique em criar conta.',
           style: typo.body.copyWith(

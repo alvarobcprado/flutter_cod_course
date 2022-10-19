@@ -33,24 +33,25 @@ class HomeSubjectsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         HomeSectionHeader(
           headerTitle: 'Matérias',
           showMoreTitle: 'ver mais',
           onTapShowMore: () {},
         ),
-        SizedBox(height: 8.fromHeight(context)),
+        SizedBox(height: 8.toSize()),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: List.generate(
               _subjects.length,
               (index) => Padding(
-                padding: EdgeInsets.only(right: 8.fromHeight(context)),
+                padding: EdgeInsets.only(right: 8.toSize()),
                 child: CodSubjectCard(
                   subjectIcon: SvgPicture.asset(
                     _subjects[index]['image']!,
-                    height: 24.fromHeight(context),
+                    height: 24.toSize(),
                   ),
                   onTap: () {},
                   subjectTitle: _subjects[index]['name']!,

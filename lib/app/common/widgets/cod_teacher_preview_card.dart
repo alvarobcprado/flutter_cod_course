@@ -32,8 +32,8 @@ class CodTeacherPreviewCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              width: 48.fromWidth(context),
-              height: 48.fromWidth(context),
+              width: 48.toSize(),
+              height: 48.toSize(),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: colors.purple,
@@ -44,7 +44,7 @@ class CodTeacherPreviewCard extends StatelessWidget {
                 loadingColor: colors.orange,
               ),
             ),
-            SizedBox(width: 8.fromHeight(context)),
+            SizedBox(width: 8.toSize()),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

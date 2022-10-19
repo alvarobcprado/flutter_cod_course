@@ -31,7 +31,7 @@ class CodFormTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final borderWidth = 2.0.fromHeight(context);
+    final borderWidth = 2.0.toSize();
     return TextFormField(
       key: key,
       controller: controller,

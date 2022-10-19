@@ -31,7 +31,7 @@ class CodClassProgressCard extends StatelessWidget {
 
     return Container(
       width: double.infinity,
-      height: 136.fromHeight(context),
+      height: 136.toSize(),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
       ),
@@ -51,8 +51,8 @@ class CodClassProgressCard extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 16.fromHeight(context),
-            top: 8.fromHeight(context),
+            left: 16.toSize(),
+            top: 8.toSize(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -74,16 +74,16 @@ class CodClassProgressCard extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 16.fromHeight(context),
-            right: 16.fromHeight(context),
-            bottom: 21.fromHeight(context),
+            left: 16.toSize(),
+            right: 16.toSize(),
+            bottom: 21.toSize(),
             child: Row(
               children: [
                 CircleAvatar(
-                  radius: 4.fromHeight(context),
+                  radius: 4.toSize(),
                   backgroundColor: colors.orange,
                 ),
-                SizedBox(width: 8.fromHeight(context)),
+                SizedBox(width: 8.toSize()),
                 Text(
                   isCompleted ? 'Assista novamente' : 'Continue assistindo',
                   style: typos.titleH3.copyWith(
@@ -109,7 +109,7 @@ class CodClassProgressCard extends StatelessWidget {
             right: 0,
             left: 0,
             child: LinearProgressIndicator(
-              minHeight: 4.fromHeight(context),
+              minHeight: 4.toSize(),
               value: progress,
               backgroundColor: colors.beige.withOpacity(0.7),
               valueColor: AlwaysStoppedAnimation<Color>(

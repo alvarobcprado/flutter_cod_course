@@ -24,8 +24,8 @@ class HomeHeader extends StatelessWidget {
     final colors = Theme.of(context).extension<CodColors>()!;
     return Padding(
       padding: EdgeInsets.symmetric(
-        vertical: 32.fromHeight(context),
-        horizontal: 24.fromHeight(context),
+        vertical: 32.toSize(),
+        horizontal: 24.toSize(),
       ),
       child: Column(
         children: [
@@ -61,14 +61,14 @@ class HomeHeader extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
-                height: 72.fromHeight(context),
-                width: 72.fromHeight(context),
+                height: 72.toSize(),
+                width: 72.toSize(),
                 decoration: BoxDecoration(
                   color: colors.orange,
                   shape: BoxShape.circle,
                   border: Border.all(
                     color: colors.orange,
-                    width: 2.fromHeight(context),
+                    width: 2.toSize(),
                     strokeAlign: StrokeAlign.outside,
                   ),
                   image: DecorationImage(
@@ -84,7 +84,7 @@ class HomeHeader extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 16.fromHeight(context),
+                width: 16.toSize(),
               ),
               Expanded(
                 child: Column(

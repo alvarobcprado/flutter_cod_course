@@ -12,22 +12,22 @@ class CodTypography extends ThemeExtension<CodTypography> {
   CodTypography()
       : titleH1 = GoogleFonts.oswald(
           fontSize: 32,
-          height: 48 / 32,
+          height: 1.5,
           fontWeight: FontWeight.w500,
         ),
         titleH2 = GoogleFonts.oswald(
           fontSize: 24,
-          height: 36 / 24,
+          height: 1.5,
           fontWeight: FontWeight.w500,
         ),
         titleH3 = GoogleFonts.oswald(
           fontSize: 16,
-          height: 24 / 16,
+          height: 1.5,
           fontWeight: FontWeight.w500,
         ),
         body = GoogleFonts.montserrat(
           fontSize: 16,
-          height: 24 / 16,
+          height: 1.5,
           fontWeight: FontWeight.w500,
         );
 

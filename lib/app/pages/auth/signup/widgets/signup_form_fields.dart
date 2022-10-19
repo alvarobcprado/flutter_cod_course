@@ -39,7 +39,7 @@ class SignupFormFields extends StatelessWidget
           ),
           textInputAction: TextInputAction.next,
         ),
-        SizedBox(height: 8.fromHeight(context)),
+        SizedBox(height: 8.toSize()),
         CodFormTextField(
           hintText: 'email@email.com',
           controller: emailController,
@@ -52,7 +52,7 @@ class SignupFormFields extends StatelessWidget
           ),
           textInputAction: TextInputAction.next,
         ),
-        SizedBox(height: 8.fromHeight(context)),
+        SizedBox(height: 8.toSize()),
         ValueListenableBuilder(
           valueListenable: obscurePasswordNotifier,
           builder: (context, obscurePassword, child) {

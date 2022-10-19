@@ -36,19 +36,19 @@ class SignupPage extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.symmetric(
-                    vertical: 32.fromHeight(context),
+                    vertical: 32.toSize(),
                   ),
                   child: SvgPicture.asset(
                     AssetsUtils.logoMono,
-                    height: 200.fromHeight(context),
+                    height: 200.toSize(),
                   ),
                 ),
                 Form(
                   key: _formKey,
                   child: CodColoredBoxColumn(
-                    boxPadding: EdgeInsets.all(24.fromHeight(context)),
+                    boxPadding: EdgeInsets.all(24.toSize()),
                     boxColor: colors.beige,
-                    boxSize: Size.fromHeight(376.fromHeight(context)),
+                    boxSize: Size.fromHeight(376.toSize()),
                     children: [
                       Text(
                         'Cadastrar no Chief',
@@ -56,14 +56,14 @@ class SignupPage extends StatelessWidget {
                           color: colors.purple,
                         ),
                       ),
-                      SizedBox(height: 8.fromHeight(context)),
+                      SizedBox(height: 8.toSize()),
                       SignupFormFields(
                         usernameController: _usernameController,
                         emailController: _emailController,
                         passwordController: _passwordController,
                         obscurePasswordNotifier: _obscurePasswordNotifier,
                       ),
-                      SizedBox(height: 16.fromHeight(context)),
+                      SizedBox(height: 16.toSize()),
                       SignupButtons(formKey: _formKey),
                     ],
                   ),

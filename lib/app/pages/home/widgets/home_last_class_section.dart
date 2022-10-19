@@ -21,7 +21,7 @@ class HomeLastClassSection extends StatelessWidget {
           showMoreTitle: 'ver mais',
           onTapShowMore: () {},
         ),
-        SizedBox(height: 8.fromHeight(context)),
+        SizedBox(height: 8.toSize()),
         CodClassProgressCard(
           classTitle: 'Cores',
           classSubtitle: 'O que é RGB?',

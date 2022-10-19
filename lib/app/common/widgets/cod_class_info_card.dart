@@ -28,8 +28,8 @@ class CodClassInfoCard extends StatelessWidget {
     final typos = Theme.of(context).extension<CodTypography>()!;
     final colors = Theme.of(context).extension<CodColors>()!;
     return Container(
-      width: 144.fromHeight(context),
-      height: 112.fromHeight(context),
+      width: 144.toSize(),
+      height: 112.toSize(),
       decoration: BoxDecoration(
         color: colors.purple,
         borderRadius: BorderRadius.circular(16),
@@ -40,7 +40,7 @@ class CodClassInfoCard extends StatelessWidget {
         child: InkWell(
           onTap: onTap,
           child: Padding(
-            padding: EdgeInsets.all(8.fromHeight(context)),
+            padding: EdgeInsets.all(8.toSize()),
             child: Column(
               children: [
                 Row(
@@ -70,7 +70,7 @@ class CodClassInfoCard extends StatelessWidget {
                                   alignment: PlaceholderAlignment.middle,
                                   child: Padding(
                                     padding: EdgeInsets.only(
-                                      right: 4.fromHeight(context),
+                                      right: 4.toSize(),
                                     ),
                                     child: Icon(
                                       Icons.school_outlined,

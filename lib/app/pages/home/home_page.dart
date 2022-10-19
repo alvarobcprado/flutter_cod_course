@@ -18,33 +18,33 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: colors.purple,
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              HomeHeader(
-                title: 'Olá João, seja bem-vindo!',
-                subtitle: 'Turma 01',
-                urlImage: 'https://picsum.photos/200',
-                onTapExit: () {
-                  Navigator.of(context).popUntil((route) => route.isFirst);
-                },
-              ),
-              CodColoredBoxColumn(
+        child: Column(
+          children: [
+            HomeHeader(
+              title: 'Olá João, seja bem-vindo!',
+              subtitle: 'Turma 01',
+              urlImage: 'https://picsum.photos/200',
+              onTapExit: () {
+                Navigator.of(context).popUntil((route) => route.isFirst);
+              },
+            ),
+            Expanded(
+              child: CodColoredBoxColumn(
                 boxColor: colors.beige,
-                boxSize: Size.fromHeight(491.fromHeight(context)),
-                boxPadding: EdgeInsets.all(24.fromHeight(context)),
+                boxSize: Size.fromHeight(491.toSize()),
+                boxPadding: EdgeInsets.all(24.toSize()),
                 children: [
                   const HomeSubjectsSection(),
-                  SizedBox(height: 24.fromHeight(context)),
+                  SizedBox(height: 24.toSize()),
                   const HomeLastClassSection(),
-                  SizedBox(height: 24.fromHeight(context)),
+                  SizedBox(height: 24.toSize()),
                   const HomeNextClassesSection(),
-                  SizedBox(height: 24.fromHeight(context)),
+                  SizedBox(height: 24.toSize()),
                   const HomeTeachersSection(),
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

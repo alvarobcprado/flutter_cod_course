@@ -39,14 +39,14 @@ class HomeTeachersSection extends StatelessWidget {
           headerTitle: 'Professores',
           showMoreTitle: 'ver mais',
         ),
-        SizedBox(height: 8.fromHeight(context)),
+        SizedBox(height: 8.toSize()),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: List.generate(
               _teachers.length,
               (index) => Padding(
-                padding: EdgeInsets.only(right: 24.fromHeight(context)),
+                padding: EdgeInsets.only(right: 24.toSize()),
                 child: CodTeacherPreviewCard(
                   teacherName: _teachers[index]['name']!,
                   teacherSpecialty: _teachers[index]['specialty']!,

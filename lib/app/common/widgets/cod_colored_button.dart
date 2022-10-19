@@ -41,7 +41,7 @@ class CodColoredButton extends StatelessWidget {
             onTap: onPressed,
             child: Padding(
               padding: EdgeInsets.symmetric(
-                vertical: 8.fromHeight(context),
+                vertical: 8.toSize(),
               ),
               child: Center(
                 child: Text(

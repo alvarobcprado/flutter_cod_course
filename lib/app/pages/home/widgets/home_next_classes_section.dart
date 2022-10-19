@@ -38,14 +38,14 @@ class HomeNextClassesSection extends StatelessWidget {
           showMoreTitle: 'ver mais',
           onTapShowMore: () {},
         ),
-        SizedBox(height: 8.fromHeight(context)),
+        SizedBox(height: 8.toSize()),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: List.generate(
               _classes.length,
               (index) => Padding(
-                padding: EdgeInsets.only(right: 16.fromHeight(context)),
+                padding: EdgeInsets.only(right: 16.toSize()),
                 child: CodClassInfoCard(
                   onTap: () {},
                   classTitle: _classes[index]['name']!,

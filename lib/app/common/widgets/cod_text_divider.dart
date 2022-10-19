@@ -22,7 +22,7 @@ class CodTextDivider extends StatelessWidget {
     return Padding(
       padding: padding ??
           EdgeInsets.symmetric(
-            vertical: 8.fromHeight(context),
+            vertical: 8.toSize(),
           ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -33,14 +33,14 @@ class CodTextDivider extends StatelessWidget {
               thickness: thickness,
             ),
           ),
-          SizedBox(width: 8.fromWidth(context)),
+          SizedBox(width: 8.toSize()),
           Text(
             text,
             style: textStyle?.copyWith(
               color: color,
             ),
           ),
-          SizedBox(width: 8.fromWidth(context)),
+          SizedBox(width: 8.toSize()),
           Expanded(
             child: Divider(
               color: color,

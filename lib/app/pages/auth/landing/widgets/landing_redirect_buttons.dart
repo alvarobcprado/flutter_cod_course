@@ -23,7 +23,7 @@ class LandingRedirectButtons extends StatelessWidget {
             Navigator.of(context).pushNamed(CodRoutes.signin);
           },
         ),
-        SizedBox(height: 24.fromHeight(context)),
+        SizedBox(height: 24.toSize()),
         CodColoredButton(
           backgroundColor: colors.beige,
           textColor: colors.purple,
