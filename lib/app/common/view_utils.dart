@@ -1,20 +1,29 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 extension SizesExtension on num {
-  static const double _baseWidth = 360;
-  static const double _baseHeight = 640;
+  static const double _baseSize = 640;
 
-  double fromWidth(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context);
-    final screenWidth = mediaQuery.size.width - mediaQuery.padding.horizontal;
-    return screenWidth * (this / _baseWidth);
+  static final _mediaQuery = MediaQueryData.fromWindow(
+    WidgetsBinding.instance.window,
+  );
+
+  double _getScreenWidth() {
+    final viewPadding = _mediaQuery.padding.horizontal;
+    final screenWidth = _mediaQuery.size.width;
+    return screenWidth - viewPadding;
   }
 
-  double fromHeight(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context);
-    final screenHeight = mediaQuery.size.height - mediaQuery.padding.vertical;
+  double _getScreenHeight() {
+    final viewPadding = _mediaQuery.padding.vertical;
+    final screenHeight = _mediaQuery.size.height;
+    return screenHeight - viewPadding;
+  }
 
-    return screenHeight * (this / _baseHeight);
+  double toSize() {
+    final size = max(_getScreenHeight(), _getScreenWidth());
+    return size * (this / _baseSize);
   }
 }
 
