@@ -1,16 +1,14 @@
-# flutter_cod_course
+# Flutter CoD Course
 
-A new Flutter project.
+A Flutter app to practice layout and figma skills.
+## Used Packages
+- google_fonts: ^3.0.1
+- font_awesome_flutter: ^10.2.1
+- flutter_svg: ^1.1.5
 
-## Getting Started
+## Figma Design
 
-This project is a starting point for a Flutter application.
+Design based on Figma course from youtube channel of [Chief of Design](https://www.youtube.com/playlist?list=PLwgL9IEA0PxXzmOu0crRl9l6PT46nqtI9).
 
-A few resources to get you started if this is your first Flutter project:
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="700" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FZ3DfMkEydNIQcnhcKoDvRu%2FFigma-Course%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
