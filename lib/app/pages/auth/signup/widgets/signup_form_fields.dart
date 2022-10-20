@@ -3,7 +3,6 @@ import 'package:flutter_cod_course/app/common/theme/cod_colors.dart';
 import 'package:flutter_cod_course/app/common/theme/cod_typography.dart';
 import 'package:flutter_cod_course/app/common/validators/email_validator.dart';
 import 'package:flutter_cod_course/app/common/validators/required_validator.dart';
-import 'package:flutter_cod_course/app/common/view_utils.dart';
 import 'package:flutter_cod_course/app/common/widgets/cod_text_field.dart';
 
 class SignupFormFields extends StatelessWidget
@@ -39,7 +38,6 @@ class SignupFormFields extends StatelessWidget
           ),
           textInputAction: TextInputAction.next,
         ),
-        SizedBox(height: 8.toSize()),
         CodFormTextField(
           hintText: 'email@email.com',
           controller: emailController,
@@ -52,7 +50,6 @@ class SignupFormFields extends StatelessWidget
           ),
           textInputAction: TextInputAction.next,
         ),
-        SizedBox(height: 8.toSize()),
         ValueListenableBuilder(
           valueListenable: obscurePasswordNotifier,
           builder: (context, obscurePassword, child) {

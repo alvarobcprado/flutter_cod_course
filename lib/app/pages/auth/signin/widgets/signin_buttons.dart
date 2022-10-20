@@ -38,7 +38,7 @@ class SigninButtons extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 16.toSize()),
+        SizedBox(height: 8.toSize()),
         CodColoredButton(
           backgroundColor: colors.orange,
           textColor: colors.beige,

@@ -29,8 +29,7 @@ extension SizesExtension on num {
   }
 
   double toSP() {
-    final density = _getScreenHeight() / _getScreenWidth().pixelToInches;
-    return ((this * 160) / density) * _mediaQuery.textScaleFactor;
+    return toSize() * _mediaQuery.textScaleFactor;
   }
 }
 

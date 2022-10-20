@@ -56,7 +56,7 @@ class SignupPage extends StatelessWidget {
                           color: colors.purple,
                         ),
                       ),
-                      SizedBox(height: 8.toSize()),
+                      // SizedBox(height: 8.toSize()),
                       SignupFormFields(
                         usernameController: _usernameController,
                         emailController: _emailController,
