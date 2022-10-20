@@ -15,10 +15,12 @@ class LandingHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Bem vindo(a) ao Chief',
-          style: typo.titleH1.copyWith(
-            color: colors.beige,
+        FittedBox(
+          child: Text(
+            'Bem vindo(a) ao Chief',
+            style: typo.titleH1.copyWith(
+              color: colors.beige,
+            ),
           ),
         ),
         SizedBox(height: 16.toSize()),
