@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             HomeHeader(
-              title: 'Olá João, seja bem-vindo!',
+              title: 'Olá, bem-vindo Fulano!',
               subtitle: 'Turma 01',
               urlImage: 'https://picsum.photos/200',
               onTapExit: () {

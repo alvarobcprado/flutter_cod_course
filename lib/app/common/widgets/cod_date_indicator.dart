@@ -26,26 +26,29 @@ class CodDateIndicator extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
       ),
       padding: EdgeInsets.all(2.toSize()),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            date,
-            style: typos.titleH3.copyWith(
-              color: colors.purple,
-              fontSize: 16.toSP(),
-              height: 1,
+      child: FittedBox(
+        fit: BoxFit.fitHeight,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              date,
+              style: typos.titleH3.copyWith(
+                color: colors.purple,
+                fontSize: 16.toSP(),
+                height: 1,
+              ),
             ),
-          ),
-          Text(
-            month,
-            style: typos.titleH3.copyWith(
-              color: colors.purple,
-              fontSize: 10.toSP(),
-              height: 1,
+            Text(
+              month,
+              style: typos.titleH3.copyWith(
+                color: colors.purple,
+                fontSize: 10.toSP(),
+                height: 1,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

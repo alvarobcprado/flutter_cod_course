@@ -33,24 +33,30 @@ class CodSubjectCard extends StatelessWidget {
         color: Colors.transparent,
         child: InkWell(
           onTap: onTap,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              subjectIcon,
-              Text(
-                subjectTitle,
-                style: typos.titleH3.copyWith(
-                  color: colors.beige,
-                ),
+          child: Padding(
+            padding: EdgeInsets.all(4.toSize()),
+            child: FittedBox(
+              fit: BoxFit.fitHeight,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  subjectIcon,
+                  Text(
+                    subjectTitle,
+                    style: typos.titleH3.copyWith(
+                      color: colors.beige,
+                    ),
+                  ),
+                  Text(
+                    '$subjectClasses aulas',
+                    style: typos.titleH3.copyWith(
+                      color: colors.beige,
+                      fontSize: 10.toSP(),
+                    ),
+                  ),
+                ],
               ),
-              Text(
-                '$subjectClasses aulas',
-                style: typos.titleH3.copyWith(
-                  color: colors.beige,
-                  fontSize: 10.toSP(),
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),

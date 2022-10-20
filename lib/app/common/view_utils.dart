@@ -29,7 +29,7 @@ extension SizesExtension on num {
   }
 
   double toSP() {
-    return toSize() * _mediaQuery.textScaleFactor;
+    return toSize();
   }
 }
 
