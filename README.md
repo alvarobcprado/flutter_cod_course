@@ -5,10 +5,13 @@ A Flutter app to practice layout and figma skills.
 - google_fonts: ^3.0.1
 - font_awesome_flutter: ^10.2.1
 - flutter_svg: ^1.1.5
+- flutter_launcher_icons: ^0.10.0
+- flutter_native_splash: ^2.2.11
 
 ## Figma Design
 
 Design based on Figma course from youtube channel of [Chief of Design](https://www.youtube.com/playlist?list=PLwgL9IEA0PxXzmOu0crRl9l6PT46nqtI9).
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="700" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FZ3DfMkEydNIQcnhcKoDvRu%2FFigma-Course%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+<a href='https://www.figma.com/file/Z3DfMkEydNIQcnhcKoDvRu/Figma-Course?node-id=0%3A1'><img src="assets/github/Figma Design.png"></a>
+
 
