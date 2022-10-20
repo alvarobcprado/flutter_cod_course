@@ -13,6 +13,7 @@ class LandingHeader extends StatelessWidget {
     final colors = Theme.of(context).extension<CodColors>()!;
     final typo = Theme.of(context).extension<CodTypography>()!;
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           'Bem vindo(a) ao Chief',
